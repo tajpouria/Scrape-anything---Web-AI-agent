@@ -137,8 +137,8 @@ async function waitForEvent(page, event) {
 
     const browser = await puppeteer.launch( {
         headless: "false",
-        executablePath: '/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary',
-        userDataDir: '/Users/jasonzhou/Library/Application\ Support/Google/Chrome\ Canary/Default',
+        // executablePath: '/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary',
+        // userDataDir: '/Users/jasonzhou/Library/Application\ Support/Google/Chrome\ Canary/Default',
     } );
 
     const page = await browser.newPage();
@@ -159,6 +159,8 @@ async function waitForEvent(page, event) {
 
             You can click links on the website by referencing the text inside of the link/button, by answering in the following JSON format:
             {"click": "Text in link"}
+
+            if you confronted with popups, you must close them first before by clicking the confirmation button before you can continue.
 
             Once you are on a URL and you have found the answer to the user's question, you can answer with a regular message.
 
